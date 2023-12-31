@@ -1,4 +1,8 @@
 import Chart from 'chart.js/auto'
+import { alert, defaultModules, error, success } from '../node_modules/@pnotify/core/dist/PNotify.js';
+import * as PNotifyMobile from "../node_modules/@pnotify/mobile/dist/PNotifyMobile.js";
+
+defaultModules.set(PNotifyMobile, {});
 
 const chartData = {
   type: 'line',
@@ -20,6 +24,34 @@ const salesChart = new Chart(document.getElementById("sales-chart"), chartData);
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
+const keys = ["ShiftRight", "KeyV", "Digit8", "Slash", "Numpad4", "KeyO", "Digit1", "AltLeft", "Space", "Tab"];
+let currentKeyIndex = 0; 
+const text = document.querySelector("#key");
+text.textContent = keys[currentKeyIndex];
 window.addEventListener("keydown", e => {
-  console.log(e.code);
+  e.preventDefault();
+  if (e.code === keys[currentKeyIndex]) {
+    currentKeyIndex++;
+    text.textContent = keys[currentKeyIndex];
+    success({
+      text: "Correct!",
+      delay: 300,
+      addClass: "success",
+    });
+  }
+  else {
+    error({
+      text: "Error",
+      delay: 300,
+      addClass: "error",
+    });
+  }
 });
+
+const newGame = document.querySelector(".new-game");
+newGame.addEventListener("click", (e) => {
+  currentKeyIndex = 0;
+  text.textContent = keys[currentKeyIndex];
+});
+
+ 
