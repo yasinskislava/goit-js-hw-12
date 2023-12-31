@@ -1,0 +1,25 @@
+{
+  "name": "goit-js-hw-12",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasinskislava/goit-js-hw-12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasinskislava/goit-js-hw-12/issues"
+  },
+  "homepage": "https://github.com/yasinskislava/goit-js-hw-12#readme",
+  "dependencies": {
+    "chart.js": "^4.4.1"
+  },
+  "devDependencies": {}
+}
