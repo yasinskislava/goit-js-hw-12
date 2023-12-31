@@ -52,6 +52,10 @@ const newGame = document.querySelector(".new-game");
 newGame.addEventListener("click", (e) => {
   currentKeyIndex = 0;
   text.textContent = keys[currentKeyIndex];
+  alert({
+    text: "New Game Started",
+    delay: 300,
+  });
 });
 
  
