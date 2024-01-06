@@ -2,11 +2,10 @@
   "name": "bt",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "pre-start": "parcel build src/index.html"
+    "prestart": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
